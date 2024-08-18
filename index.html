@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Irrigation Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-content">
+            <h1>Welcome to Smart Irrigation</h1>
+            <p>Loading...</p>
+        </div>
+    </div>
+    <header class="header">
+        <h1>Smart Irrigation Dashboard</h1>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="dosage.html">Dosage</a>s</li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sections for Air Temperature, Air Humidity, and Soil Moisture displayed side by side -->
+        <section class="metrics-container">
+            <div class="box-container">
+                <div class="label">Air Temperature</div>
+                <div class="box">
+                    <canvas id="airTemperatureChart"></canvas>
+                </div>
+                <div class="current-value" id="currentTemperature">Current Temperature: 50°C</div>
+            </div>
+
+            
+            <div class="box-container">
+                <div class="label">Soil Moisture</div>
+                <div class="box">
+                    <canvas id="soilMoistureChart"></canvas>
+                </div>
+                <div class="current-value" id="currentSoilMoisture">Current Soil Moisture: 30%</div>
+            </div>
+        </section>
+
+        <!-- Sunlight Status Section -->
+        <section class="sunlight-status-container">
+            <div class="sunlight-status">
+                <div id="sunlightAnimation" class="sunlight-animation"></div>
+                <div class="sunlight-info" id="sunlightStatus">Checking Sunlight...</div>
+            </div>
+        </section>
+
+        <!-- Additional section for CO2 Percentage -->
+        <section class="metrics-container">
+            <div class="box-container">
+                <div class="label">CO2 Percentage</div>
+                <div class="box">
+                    <canvas id="co2Chart"></canvas>
+                </div>
+                <div class="current-value" id="currentCO2">Current CO2 Percentage: 400 ppm</div>
+            </div>
+            
+            <div class="box-container">
+                <div class="label">Air Humidity</div>
+                <div class="box">
+                    <canvas id="airHumidityChart"></canvas>
+                </div>
+                <div class="current-value" id="currentHumidity">Current Humidity: 60%</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
